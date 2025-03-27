@@ -688,7 +688,6 @@ MonoBehaviour:
   levels:
   - {fileID: 11400000, guid: 2d265188e4c1f16489b762ab8367dac8, type: 2}
   - {fileID: 11400000, guid: 37c31d964ea8d094bb57d7fac6445220, type: 2}
-  - {fileID: 11400000, guid: 2f656ce39a481d04fb16510e8b06464e, type: 2}
   levelList: {fileID: 801296253}
   levelButtonPrefab: {fileID: 404215232194541579, guid: 8369433759b580a4f84003601614310c, type: 3}
   gameSceneName: GameScene
@@ -1253,13 +1252,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Baka Baka Games Inc
-
-    Game by Pau
-
-    Sprite del 0 by Nachi
-
-'
+  m_text: "Baka Baka Games Inc\nGame by Pau L\xF3pez\nSprite del 0 by Nachi\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

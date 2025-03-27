@@ -12,9 +12,13 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] private GameObject levelButtonPrefab;
     [SerializeField] private string gameSceneName;
+
     // Start is called before the first frame update
     void Start()
     {
+        QualitySettings.vSyncCount = 0;
+        Application.targetFrameRate = 60;
+
         foreach (StackLevel level in levels)
         {
             GameObject newButton = Instantiate(levelButtonPrefab, levelList);

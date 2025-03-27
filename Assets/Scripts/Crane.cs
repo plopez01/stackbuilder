@@ -64,7 +64,7 @@ public class Crane : MonoBehaviour
         }
         else
         {
-            Manager.instance.TriggerLoseGame($"Correct answer was: {currentLevel.GetBlock(stackPointer).name}");
+            Manager.instance.TriggerLoseGame($"La resposta correcta era: {currentLevel.GetBlock(stackPointer).name}");
         }
     }
 
