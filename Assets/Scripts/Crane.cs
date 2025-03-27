@@ -41,7 +41,7 @@ public class Crane : MonoBehaviour
             if (stackPointer < currentLevel.GetBlockCount())
             {
                 blockFallWait = StartCoroutine(WaitForBlockFall());
-                if (stackPointer > 4) cameraFollow.Move();
+                if (stackPointer > 3) cameraFollow.Move();
             } else
             {
                 Manager.instance.TriggerWinGame();
