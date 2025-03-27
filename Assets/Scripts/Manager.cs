@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Manager : MonoBehaviour
 {
     public static Manager instance;
+    public static StackLevel currentLevel;
 
     public UnityEvent gameWonEvent;
     public UnityEvent<string> gameLostEvent;

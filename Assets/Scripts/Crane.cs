@@ -24,6 +24,12 @@ public class Crane : MonoBehaviour
 
     private Coroutine blockFallWait;
 
+    private void Awake()
+    {
+        // TODO: This could be better
+        currentLevel = Manager.currentLevel;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
