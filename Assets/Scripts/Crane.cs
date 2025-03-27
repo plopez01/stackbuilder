@@ -85,6 +85,7 @@ public class Crane : MonoBehaviour
 
         Rigidbody2D rb = block.GetComponent<Rigidbody2D>();
         rb.simulated = true;
+        rb.velocity = block.GetComponent<VelocityDerivator>().GetVelocity();
     }
 
     private GameObject NewBlock(Sprite sprite)
