@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30b06ce0df4a5f9459d1b34ad60f31ee, type: 3}
-  m_Name: ISR Stack
+  m_Name: ISR Entry
   m_EditorClassIdentifier: 
   stack:
   - {fileID: 21300000, guid: caab17db501f70049b89b1b78a1f3eda, type: 3}
