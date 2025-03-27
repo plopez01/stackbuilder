@@ -14,6 +14,8 @@ public class Crane : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [Space]
     [SerializeField] private TMP_InputField inputField;
+
+
     [SerializeField] private UnityEvent blockPlaced;
 
     private int stackPointer;
@@ -56,13 +58,13 @@ public class Crane : MonoBehaviour
         }
         else
         {
-            Manager.instance.TriggerLoseGame();
+            Manager.instance.TriggerLoseGame($"Correct answer was: {currentLevel.GetBlock(stackPointer).name}");
         }
     }
 
     public void CancelBlockFallWait()
     {
-        StopCoroutine(blockFallWait);
+        if (blockFallWait != null) StopCoroutine(blockFallWait);
     }
 
     private void NextBlock()

@@ -9,7 +9,7 @@ public class Manager : MonoBehaviour
     public static Manager instance;
 
     public UnityEvent gameWonEvent;
-    public UnityEvent gameLostEvent;
+    public UnityEvent<string> gameLostEvent;
     
     private bool gameOver = false;
 
@@ -37,10 +37,10 @@ public class Manager : MonoBehaviour
         gameWonEvent.Invoke();
     }
 
-    public void TriggerLoseGame()
+    public void TriggerLoseGame(string reason)
     {
         gameOver = true;
-        gameLostEvent.Invoke();
+        gameLostEvent.Invoke(reason);
     }
 
     public bool IsGameOver()
