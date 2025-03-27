@@ -372,6 +372,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1045742716}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &536584500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1208,7 +1220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1045742717
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2892,11 +2904,11 @@ MonoBehaviour:
   currentLevel: {fileID: 11400000, guid: 2d265188e4c1f16489b762ab8367dac8, type: 2}
   baseBlock: {fileID: 4879109495149265503, guid: 4981306a95a7ed045bcb770ae0ec02f3, type: 3}
   spawnPoint: {fileID: 684167402}
-  inputField: {fileID: 0}
+  inputField: {fileID: 1296098995}
   blockPlaced:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1045742716}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
