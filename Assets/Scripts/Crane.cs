@@ -20,24 +20,25 @@ public class Crane : MonoBehaviour
 
     private GameObject currentBlock;
 
+    private Coroutine blockFallWait;
+
     // Start is called before the first frame update
     void Start()
     {
         stackPointer = 0;
-        NextBlock();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Manager.instance.IsGameOver()) return;
+        if (Manager.instance.IsGameOver() || currentBlock == null) return;
 
         if (Input.GetMouseButtonDown(0))
         {
             Drop(currentBlock);
             if (stackPointer < currentLevel.GetBlockCount())
             {
-                StartCoroutine(WaitForBlockFall());
+                blockFallWait = StartCoroutine(WaitForBlockFall());
                 if (stackPointer > 4) cameraFollow.Move();
             } else
             {
@@ -49,7 +50,7 @@ public class Crane : MonoBehaviour
     // This should be a separate class but I'm speedrunning this
     public void CheckAnswer()
     {
-        if (inputField.text.Trim().ToUpper() == currentLevel.GetBlock(stackPointer + 1).name)
+        if (inputField.text.Trim().ToUpper() == currentLevel.GetBlock(stackPointer).name)
         {
             NextBlock();
         }
@@ -59,6 +60,11 @@ public class Crane : MonoBehaviour
         }
     }
 
+    public void CancelBlockFallWait()
+    {
+        StopCoroutine(blockFallWait);
+    }
+
     private void NextBlock()
     {
         currentBlock = NewBlock(currentLevel.GetBlock(stackPointer++));
@@ -66,6 +72,7 @@ public class Crane : MonoBehaviour
 
     private void Drop(GameObject block)
     {
+        currentBlock = null;
         block.transform.SetParent(null);
 
         Rigidbody2D rb = block.GetComponent<Rigidbody2D>();
